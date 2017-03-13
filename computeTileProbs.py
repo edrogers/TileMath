@@ -28,7 +28,7 @@ class square:
             return True
         return False
 
-tile_size=64
+tile_size=96
 offset_list = [0, tile_size/2, tile_size/4, 3*tile_size/4]
 color_list  = ["red", "blue", "green", "cyan"] * tile_size
 size_and_probability_tuple_list = []
@@ -69,7 +69,7 @@ color_codes=['rs','b^', 'go', 'y*']
 for n in range(len(offset_list)):
     plt.plot(list_of_xs[n],list_of_ys[n],color_codes[n])
 plt.xlim([0,tile_size])
-plt.xticks(range(0,tile_size+1,8))
+plt.xticks(range(0,tile_size+1,tile_size//8))
 tick_spacing=0.1
 ax.yaxis.set_major_locator(ticker.MultipleLocator(tick_spacing))
 plt.grid()
